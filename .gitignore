@@ -1,0 +1,6 @@
+.DS_Store
+
+# Internal project notes, strategy, prompts, and drafts.
+*.md
+
+# Keep only the public static website files in the repository.
