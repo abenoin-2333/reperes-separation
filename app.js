@@ -456,11 +456,11 @@ function updateCompensationSignal() {
   });
 }
 
-nextButton.addEventListener("click", goNext);
-prevButton.addEventListener("click", goPrev);
-restartButton.addEventListener("click", restart);
-emailButton.addEventListener("click", captureEmail);
-questionButton.addEventListener("click", captureQuestion);
+nextButton?.addEventListener("click", goNext);
+prevButton?.addEventListener("click", goPrev);
+restartButton?.addEventListener("click", restart);
+emailButton?.addEventListener("click", captureEmail);
+questionButton?.addEventListener("click", captureQuestion);
 lawyerRate?.addEventListener("change", updateLawyerEstimate);
 lawyerHours?.addEventListener("change", updateLawyerEstimate);
 documentComplexity?.addEventListener("change", updateLawyerEstimate);
@@ -472,6 +472,6 @@ careerImpact?.addEventListener("change", updateCompensationSignal);
 assetComplexity?.addEventListener("change", updateCompensationSignal);
 childrenImpact?.addEventListener("change", updateCompensationSignal);
 
-renderQuestion();
+if (form) renderQuestion();
 updateLawyerEstimate();
 updateCompensationSignal();

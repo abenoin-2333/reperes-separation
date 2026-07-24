@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Finances, pension et prestation compensatoire</title>
+    <meta name="description" content="Repères pratiques pour préparer les coûts d’avocat, la pension alimentaire, les documents financiers et la prestation compensatoire." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar" aria-label="Navigation principale">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">RS</span><span>Repères Séparation</span></a>
+      <nav class="nav"><a href="index.html">Accueil</a><a href="enfants.html">Enfants</a><a href="parcours.html">Parcours</a><a href="methode.html">Méthode</a><a href="kit.html">Kit</a><a href="index.html#question">Question</a></nav>
+    </header>
+    <main>
+      <section class="page-hero">
+        <div class="section-heading">
+          <p class="eyebrow">Finances</p>
+          <h1>Préparer les chiffres avant qu’ils deviennent une source de panique.</h1>
+          <p class="lead">Pension, prestation compensatoire, honoraires, logement, charges, documents bancaires : l’objectif n’est pas de deviner le résultat, mais d’arriver préparé.</p>
+          <div class="page-nav"><a href="#couts">Coûts avocat</a><a href="#prestation">Prestation</a><a href="#sources">Sources</a></div>
+        </div>
+      </section>
+      <section class="cost-section" id="couts">
+        <div class="cost-layout">
+          <div class="section-heading"><p class="eyebrow">Coût et charge mentale</p><h2>Même un divorce amiable peut devenir lourd si rien n’est préparé.</h2><p>Le coût ne vient pas seulement de la procédure, mais du temps passé à chercher, expliquer, transmettre et corriger les informations.</p></div>
+          <div class="cost-panel"><h3>Ce qu’il faut souvent préparer</h3><ul><li>Revenus, comptes bancaires, crédits, charges et patrimoine.</li><li>Documents bancaires ou fiscaux parfois difficiles à retrouver.</li><li>Organisation des enfants : résidence, alternance, frais, pension.</li><li>Points à négocier : prestation compensatoire, logement, partage, calendrier.</li></ul></div>
+        </div>
+        <div class="cost-estimator" aria-labelledby="estimator-title">
+          <div><p class="eyebrow">Préparer le budget</p><h3 id="estimator-title">Visualiser le coût des heures d’avocat.</h3><p>Ce module ne calcule ni pension ni prestation. Il montre pourquoi un dossier mal préparé peut coûter cher rapidement.</p></div>
+          <form class="estimator-form">
+            <label>Taux horaire avocat<select id="lawyerRate"><option value="180">180 € / h</option><option value="250" selected>250 € / h</option><option value="320">320 € / h</option><option value="450">450 € / h</option></select></label>
+            <label>Heures probables<select id="lawyerHours"><option value="5">5 h</option><option value="10" selected>10 h</option><option value="20">20 h</option><option value="35">35 h</option></select></label>
+            <label>Complexité documentaire<select id="documentComplexity"><option value="0">Simple</option><option value="4" selected>Moyenne</option><option value="10">Élevée</option></select></label>
+          </form>
+          <div class="estimator-result"><span>Ordre de grandeur préparation</span><strong id="lawyerEstimate">0 €</strong><p id="lawyerEstimateText"></p></div>
+        </div>
+      </section>
+      <section class="compensation-section" id="prestation">
+        <div class="compensation-layout">
+          <div class="section-heading"><p class="eyebrow">Prestation compensatoire</p><h2>Un sujet presque incontournable à préparer avant de négocier.</h2><p>Il n’existe pas de barème légal unique. Le cadre officiel regarde notamment les besoins, ressources, durée du mariage, âge, situation professionnelle, choix faits pour les enfants, patrimoine et retraite prévisible.</p></div>
+          <aside class="finance-note"><span>À comprendre</span><strong>Le danger n’est pas seulement le montant final, c’est d’arriver sans hypothèses, sans documents et sans questions précises.</strong><p>Des méthodes indicatives existent dans la pratique. Elles donnent des ordres de grandeur, parfois très différents, mais ne remplacent pas l’analyse d’un avocat.</p></aside>
+        </div>
+        <div class="factor-grid">
+          <article><span>Peut tirer vers le haut</span><h3>Écart de revenus durable</h3><p>Un différentiel de revenus important ou une capacité d’épargne très différente peut peser.</p></article>
+          <article><span>Peut tirer vers le haut</span><h3>Choix professionnels</h3><p>Temps partiel, arrêt de carrière, enfants ou choix faits pour favoriser l’autre conjoint peuvent compter.</p></article>
+          <article><span>Peut tirer vers le bas</span><h3>Mariage court</h3><p>Une durée limitée, une reprise d’activité réaliste ou des ressources propres peuvent réduire l’exposition.</p></article>
+          <article><span>Peut changer l’analyse</span><h3>Patrimoine et retraite</h3><p>Biens, régime matrimonial, droits futurs et retraite peuvent modifier fortement la lecture du dossier.</p></article>
+        </div>
+        <div class="compensation-tool" aria-labelledby="compensation-tool-title">
+          <div><p class="eyebrow">Calculatrice pédagogique</p><h3 id="compensation-tool-title">Mesurer l’exposition, sans prétendre calculer le montant légal.</h3><p>Les montants restent dans ton navigateur. L’outil sert à comprendre les facteurs à préparer.</p></div>
+          <form class="compensation-form">
+            <label>Tes revenus mensuels nets<input id="yourIncome" type="number" min="0" step="100" placeholder="Ex. 3200" inputmode="numeric" /></label>
+            <label>Revenus mensuels nets de l’autre personne<input id="otherIncome" type="number" min="0" step="100" placeholder="Ex. 1800" inputmode="numeric" /></label>
+            <label>Durée exacte du mariage, en années complètes<input id="marriageYears" type="number" min="0" max="60" step="1" placeholder="Ex. 7" inputmode="numeric" /></label>
+            <label>Choix de carrière ou arrêt d’activité<select id="careerImpact"><option value="0">Non ou faible</option><option value="1" selected>À clarifier</option><option value="2">Important</option></select></label>
+            <label>Patrimoine / logement / retraite<select id="assetComplexity"><option value="0">Simple</option><option value="1" selected>À clarifier</option><option value="2">Complexe</option></select></label>
+            <label>Enfants et pension<select id="childrenImpact"><option value="0">Pas d’enfant concerné</option><option value="1" selected>Organisation à clarifier</option><option value="2">Sujet déjà sensible</option></select></label>
+          </form>
+          <div class="compensation-result"><span>Niveau d’exposition à clarifier</span><strong id="compensationLevel">À calculer</strong><p id="compensationSummary"></p><ul id="compensationDrivers" class="driver-list"></ul></div>
+          <p class="legal-note">Repère pédagogique. Ce n’est ni un devis, ni une prédiction judiciaire, ni un conseil juridique.</p>
+        </div>
+      </section>
+      <section class="sources-section" id="sources"><div class="section-heading"><p class="eyebrow">Sources</p><h2>Références utiles.</h2></div><div class="source-grid"><a href="https://www.service-public.fr/particuliers/vosdroits/F1760" target="_blank" rel="noreferrer">Service-Public : prestation compensatoire</a><a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006422746" target="_blank" rel="noreferrer">Code civil, article 271</a><a href="https://www.service-public.fr/particuliers/vosdroits/F991" target="_blank" rel="noreferrer">Pension alimentaire</a><a href="https://www.justifit.fr/b/guides/droit-famille/divorce/simulation-prestation-compensatoire/" target="_blank" rel="noreferrer">Méthodes indicatives publiques</a></div></section>
+      <section class="crosslink-section"><div class="crosslink-grid"><a href="index.html#diagnostic"><span>Diagnostic</span>Faire le point</a><a href="enfants.html"><span>Enfants</span>Organisation et pension</a><a href="parcours.html"><span>Parcours</span>Voir les étapes</a><a href="methode.html"><span>Méthode</span>Préparer les documents</a></div></section>
+    </main>
+    <footer class="footer"><p>Repères Séparation propose une aide pratique d’organisation. En cas de danger, d’urgence ou de procédure sensible, contacte un professionnel qualifié ou les services compétents.</p></footer>
+    <script src="app.js"></script>
+  </body>
+</html>
