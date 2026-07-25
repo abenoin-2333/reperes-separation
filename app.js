@@ -144,7 +144,7 @@ const results = [
     actions: [
       "Classer les échanges importants par date : messages, emails, décisions sur les enfants, logement et finances.",
       "Séparer trois colonnes : faits vérifiables, demandes reçues, décisions à prendre.",
-      "Préparer un budget provisoire : revenus, charges fixes, logement, frais des enfants, crédits, avocat, pension et prestation compensatoire possible.",
+      "Préparer un budget provisoire : revenus, charges fixes, logement, frais des enfants, crédits, avocat, pension et sujets financiers à vérifier.",
       "Lister les points à aborder avec un professionnel : résidence, contribution, logement, comptes, biens, urgence.",
       "Utiliser des réponses écrites courtes, factuelles et relues à froid pour éviter d’aggraver le conflit.",
     ],
@@ -392,7 +392,7 @@ function updateLawyerEstimate() {
       ? formatEuros(base)
       : `${formatEuros(base)} à ${formatEuros(withComplexity)}`;
   lawyerEstimateText.textContent =
-    "Cette estimation illustre seulement les heures de préparation et de traitement. Elle ne comprend pas pension, prestation compensatoire, partage, notaire ou autres frais.";
+    "Ce repère illustre seulement des heures possibles de préparation et de traitement. Il ne concerne ni pension, ni prestation compensatoire, ni partage, ni notaire, ni autres frais.";
 }
 
 function updateCompensationSignal() {
@@ -428,24 +428,24 @@ function updateCompensationSignal() {
   }
   if (years > 0) drivers.push(`Durée renseignée : ${years} an${years > 1 ? "s" : ""} de mariage.`);
   if (years >= 10) drivers.push("Durée du mariage importante : ce point peut peser davantage dans l’analyse.");
-  if (years > 0 && years < 5) drivers.push("Mariage court : ce point peut limiter l’exposition selon le dossier.");
+  if (years > 0 && years < 5) drivers.push("Mariage court : ce point doit être présenté factuellement, sans en déduire seul une conclusion.");
   if (careerScore === 2) drivers.push("Arrêt d’activité ou sacrifice professionnel important : facteur à documenter précisément.");
   if (careerScore === 0) drivers.push("Pas de sacrifice professionnel identifié : ce point peut réduire la pression sur ce facteur.");
   if (assetScore === 2) drivers.push("Patrimoine, logement ou retraite complexes : il faut préparer les pièces avant toute discussion chiffrée.");
   if (childrenScore === 2) drivers.push("Enfants et pension déjà sensibles : à séparer clairement de la prestation compensatoire.");
 
   if (score <= 2) {
-    compensationLevel.textContent = "Exposition plutôt basse à clarifier";
+    compensationLevel.textContent = "Peu de facteurs renseignés à ce stade";
     compensationSummary.textContent =
-      "Les premiers facteurs ne montrent pas une forte pression, mais il faut vérifier les documents, le patrimoine et les choix faits pendant le mariage.";
+      "Les informations saisies servent seulement à préparer la discussion. Il faut vérifier les documents, le patrimoine et les choix faits pendant le mariage avec un professionnel qualifié.";
   } else if (score <= 5) {
-    compensationLevel.textContent = "Zone intermédiaire";
+    compensationLevel.textContent = "Plusieurs facteurs à documenter";
     compensationSummary.textContent =
-      "C’est typiquement la zone où les méthodes peuvent donner des résultats très différents. La priorité est de préparer les hypothèses et les justificatifs avant de discuter d’un montant.";
+      "Plusieurs éléments peuvent nécessiter des justificatifs. La priorité est de préparer les faits, les hypothèses et les questions avant toute discussion chiffrée.";
   } else {
-    compensationLevel.textContent = "Vigilance élevée";
+    compensationLevel.textContent = "Préparation renforcée recommandée";
     compensationSummary.textContent =
-      "Plusieurs facteurs peuvent pousser la discussion vers le haut. Il faut éviter d’arriver sans chiffres, sans chronologie et sans questions préparées.";
+      "Plusieurs facteurs doivent être documentés avec prudence. Ce résultat ne dit pas ce qui est dû ou probable : il indique seulement qu’il faut arriver avec chiffres, chronologie et questions préparées.";
   }
 
   compensationDrivers.innerHTML = "";
