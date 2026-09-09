@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Préparer une question - Point Séparation</title>
+    <meta name="description" content="Prépare une question claire sur ta séparation : situation, enfants, finances, documents ou départ à l’étranger. Relis ton brouillon avant de le partager." />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="journey.css" />
+    <script src="contact-config.js" defer></script>
+    <script src="contact.js" defer></script>
+  </head>
+  <body class="journey-page">
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="topbar">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">PS</span><span>Point Séparation</span></a>
+      <nav class="nav" aria-label="Navigation principale"><a href="index.html#sujets">Les repères</a><a href="diagnostic.html">Faire le point</a><a href="pourquoi.html">Notre démarche</a><a href="question.html" aria-current="page">Poser une question</a></nav>
+    </header>
+    <main id="contenu" class="intake-main">
+      <div class="intake-intro">
+        <a class="back-link" href="index.html">Retour à l’accueil</a>
+        <p class="eyebrow">Poser les faits</p>
+        <h1>Une question plus claire.<br />Un premier pas plus simple.</h1>
+        <p class="lead">Enfants, budget, démarches : commence par le sujet qui te préoccupe le plus. Quelques lignes suffisent.</p>
+      </div>
+      <div class="intake-layout">
+        <aside class="intake-context" aria-label="Avant de commencer">
+          <h2>Garde l’essentiel.</h2>
+          <p>Une date utile, la situation actuelle et ce que tu cherches à comprendre. Tu n’as pas besoin de raconter toute ton histoire.</p>
+          <p>N’indique ni nom d’enfant, ni adresse précise, ni coordonnées de l’autre parent, ni données bancaires ou médicales. N’ajoute pas de pièce jointe.</p>
+          <p>Cette préparation n’est ni une consultation juridique ni une réponse automatique par IA.</p>
+          <a href="checklist-preparation.html">Consulter la checklist gratuite</a>
+          <div class="help-note">
+            <h3>Un danger immédiat ?</h3>
+            <p>Ce formulaire n’est pas un service d’urgence. En France, appelle le <a href="tel:17">17</a> ou le <a href="tel:112">112</a>.</p>
+            <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F33954" target="_blank" rel="noopener noreferrer">Numéros d’urgence : Service Public</a>
+          </div>
+        </aside>
+        <div>
+          <div class="mode-notice" id="modeNotice" role="status">La réception des questions n’est pas encore ouverte. Tu peux préparer, relire et télécharger ton brouillon ici. Rien n’est envoyé.</div>
+          <div id="externalDestination" class="external-destination" hidden>
+            <p>La demande se poursuit sur un formulaire externe. Ton brouillon n’y sera pas transféré automatiquement.</p>
+            <a id="externalLink" class="button primary" target="_blank" rel="noopener noreferrer">Ouvrir le formulaire de contact</a>
+          </div>
+          <noscript><p class="mode-notice">Active JavaScript pour préparer ton brouillon. Sans JavaScript, aucun envoi n’est possible. La <a href="checklist-preparation.html">checklist</a> reste accessible.</p></noscript>
+          <form id="intakeForm" novalidate>
+            <fieldset id="intakeFields" disabled>
+              <legend class="sr-only">Préparer ma question</legend>
+              <p class="field-guide">Tous les champs sont requis, sauf l’email en mode brouillon.</p>
+              <div id="errorSummary" class="error-summary" role="alert" tabindex="-1" hidden></div>
+              <div class="intake-grid">
+                <div class="field-row full">
+                  <label for="contactEmail">Ton email <span id="emailOptional">(facultatif)</span></label>
+                  <input id="contactEmail" name="email" type="email" autocomplete="email" maxlength="254" aria-describedby="emailHelp emailError" />
+                  <small id="emailHelp">Utile seulement si tu souhaites être recontacté lorsque tu partageras ta question.</small>
+                  <small id="emailError" class="field-error"></small>
+                </div>
+                <div class="field-row">
+                  <label for="situation">Où en es-tu ?</label>
+                  <select id="situation" name="situation" required aria-describedby="situationError"><option value="">Choisir</option><option value="envisagee">Séparation envisagée</option><option value="annoncee">Séparation annoncée</option><option value="separes">Déjà séparés</option><option value="procedure">Procédure en cours</option><option value="apres">Après la séparation</option></select>
+                  <small id="situationError" class="field-error"></small>
+                </div>
+                <div class="field-row">
+                  <label for="subject">Quel est ton sujet principal ?</label>
+                  <select id="subject" name="subject" required aria-describedby="subjectError"><option value="">Choisir</option><option value="enfants">Enfants et résidence</option><option value="finances">Finances, pension et budget</option><option value="logement">Logement</option><option value="documents">Documents et rendez-vous</option><option value="procedure">Étapes du divorce</option><option value="international">Couple binational / étranger</option><option value="tensions">Violences, pressions ou menaces</option><option value="soutien">Isolement et besoin de soutien</option><option value="autre">Autre sujet</option></select>
+                  <small id="subjectError" class="field-error"></small>
+                </div>
+                <div class="field-row full">
+                  <label for="questionText">Que souhaites-tu clarifier ?</label>
+                  <textarea id="questionText" name="question" rows="5" required minlength="20" maxlength="2000" aria-describedby="questionHelp questionCount questionError" placeholder="Exemple : nous sommes séparés depuis un mois. Je voudrais préparer les questions sur les trajets scolaires pour mon prochain rendez-vous."></textarea>
+                  <div class="field-meta"><small id="questionHelp">De 20 à 2 000 caractères. Reste sur des faits et une question.</small><small id="questionCount">0 / 2 000</small></div>
+                  <small id="questionError" class="field-error"></small>
+                </div>
+                <div class="field-row full">
+                  <label for="urgency">À quelle échéance dois-tu faire le point ?</label>
+                  <select id="urgency" name="urgency" required aria-describedby="urgencyHelp urgencyError"><option value="">Choisir</option><option value="anticiper">Je souhaite anticiper</option><option value="semaines">Dans les prochaines semaines</option><option value="jours">Dans les prochains jours</option><option value="danger">Une personne est en danger immédiat</option></select>
+                  <small id="urgencyHelp">Ce choix ne garantit pas un délai de réponse.</small>
+                  <small id="urgencyError" class="field-error"></small>
+                </div>
+              </div>
+              <div id="urgentNotice" class="urgent-notice" role="alert" hidden>
+                <h3>N’attends pas une réponse via ce formulaire.</h3>
+                <p>En cas de danger immédiat, appelle le <a href="tel:17">17</a> ou le <a href="tel:112">112</a>. Pour un enfant en danger, le <a href="tel:119">119</a> est aussi un point de contact. Les numéros et leurs usages sont précisés sur <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F33954" target="_blank" rel="noopener noreferrer">Service Public</a>.</p>
+              </div>
+              <label class="consent-row" for="scopeConsent"><input id="scopeConsent" name="scopeConsent" type="checkbox" required aria-describedby="scopeError" /><span>Je comprends que Point Séparation propose des repères pratiques et ne remplace pas un avocat ou un professionnel qualifié.</span></label>
+              <small id="scopeError" class="field-error"></small>
+              <div id="remoteConsent" hidden>
+                <label class="consent-row" for="dataConsent"><input id="dataConsent" name="dataConsent" type="checkbox" aria-describedby="dataError" /><span>J’accepte la transmission des informations saisies pour traiter ma demande et me recontacter, selon la <a id="privacyNoticeLink" target="_blank" rel="noopener noreferrer">notice de confidentialité</a>.</span></label>
+                <small id="dataError" class="field-error"></small>
+              </div>
+              <div class="intake-actions"><button class="button primary" type="submit">Relire ma question</button><button class="button secondary" id="clearDraft" type="button">Effacer les champs</button></div>
+              <p class="field-guide">Aucun enregistrement automatique par ce formulaire. Le brouillon reste dans cette page tant qu’elle est ouverte. <a href="confidentialite.html">Comprendre l’utilisation des données</a></p>
+            </fieldset>
+          </form>
+          <section id="draftReview" class="draft-review" aria-labelledby="reviewTitle" hidden>
+            <p class="eyebrow">Relecture</p>
+            <h2 id="reviewTitle" tabindex="-1">Ta question est prête à relire.</h2>
+            <p id="reviewHelp">Ce brouillon n’a pas été envoyé. Tu choisis si tu souhaites le conserver ou le partager.</p>
+            <label for="draftText">Ton récapitulatif</label>
+            <textarea id="draftText" readonly rows="12"></textarea>
+            <div class="intake-actions"><button id="sendQuestion" class="button primary" type="button" hidden>Envoyer ma question</button><button id="copyDraft" class="button secondary" type="button">Copier le brouillon</button><button id="downloadDraft" class="button secondary" type="button">Télécharger le brouillon</button><button id="editDraft" class="button secondary" type="button">Modifier</button></div>
+            <p id="submissionStatus" role="status" aria-live="polite"></p>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer class="footer"><p>Point Séparation · Information générale et préparation en France.</p><a href="confidentialite.html">Données et confidentialité</a></footer>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Faire le point sur sa séparation - Point Séparation</title>
+    <meta name="description" content="11 questions gratuites pour repérer les sujets à préparer lors d’une séparation : enfants, finances, logement et documents. Sans compte ni envoi des réponses." />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="journey.css" />
+    <link rel="stylesheet" href="product.css" />
+    <script src="preparation.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body class="journey-page">
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="topbar"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">PS</span><span>Point Séparation</span></a><nav class="nav" aria-label="Navigation principale"><a href="index.html#sujets">Les repères</a><a href="diagnostic.html" aria-current="page">Faire le point</a><a href="pourquoi.html">Notre démarche</a><a href="question.html">Poser une question</a></nav></header>
+    <main id="contenu" class="guided-main">
+      <a class="back-link" href="index.html">Retour à l’accueil</a>
+      <section id="diagnostic" aria-labelledby="diagnostic-title">
+        <div class="guided-intro"><p class="eyebrow">Point guidé · Gratuit · Sans compte</p><h1 id="diagnostic-title">Préparer ton prochain rendez-vous.</h1><p class="lead">Prépare ton prochain rendez-vous : ta situation, tes documents, tes questions et tes priorités. 11 questions pour construire un premier plan. Ce questionnaire utilise des réponses prédéfinies, sans intelligence artificielle ni analyse juridique personnalisée.</p><p class="legal-note">Tes réponses restent dans cette page. Elles ne sont ni envoyées ni enregistrées automatiquement par le site.</p></div>
+        <p class="help-note">En cas de danger immédiat, appelle le <a href="tel:17">17</a> ou le <a href="tel:112">112</a>. <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F33954" target="_blank" rel="noopener noreferrer">Numéros d’urgence officiels</a>.</p>
+        <noscript><p class="mode-notice">Ce questionnaire nécessite JavaScript. Tu peux consulter directement la <a href="checklist-preparation.html">checklist de préparation</a>.</p></noscript>
+        <div class="diagnostic-shell">
+          <div class="progress-line" aria-hidden="true"><span id="progressBar"></span></div>
+          <form id="diagnosticForm" class="question-card">
+            <div class="question-meta"><span id="stepText" role="status">Question 1 sur 11</span><span id="axisText">Situation</span></div>
+            <fieldset id="questionField"><legend id="questionTitle" tabindex="-1"></legend><div id="answers" class="answers"></div></fieldset>
+            <div class="form-actions"><button class="button secondary" id="prevButton" type="button">Retour</button><button class="button primary" id="nextButton" type="button" disabled>Continuer</button></div>
+          </form>
+          <article id="resultCard" class="result-card hidden" aria-live="polite">
+            <p class="eyebrow">Tes repères de préparation</p><h2 id="resultTitle" tabindex="-1"></h2><p id="resultSummary"></p>
+            <div class="result-focus"><span>Point de départ</span><strong id="resultPriority"></strong></div>
+            <details class="plan-section"><summary>1. Ta situation : relire tes réponses</summary><ul id="resultSituation" class="action-list"></ul></details>
+            <div class="result-columns"><section aria-labelledby="next-title"><h3 id="next-title">2. Tes priorités</h3><ul id="resultNextSteps" class="action-list compact"></ul></section><section aria-labelledby="actions-title"><h3 id="actions-title">3. Tes cinq prochaines actions</h3><ul id="resultActions" class="action-list"></ul></section></div>
+            <details class="plan-section"><summary>4. Tes documents à réunir</summary><ul id="resultDocuments" class="action-list"></ul><p class="legal-note">Liste de départ, non exhaustive : le cabinet te confirmera les pièces adaptées à ta situation.</p></details>
+            <details class="plan-section"><summary>5. Tes questions pour le professionnel</summary><ul id="resultQuestions" class="action-list"></ul></details>
+            <section class="plan-section"><h3>6. Tes points d’attention</h3><ul id="resultAttention" class="action-list"></ul></section>
+            <section class="plan-section"><h3>7. Tes ressources</h3><ul id="resultResources" class="action-list"></ul></section>
+            <p class="legal-note">Sélection par règles éditoriales, version du 9 septembre 2026. Les sources juridiques figurent dans les ressources liées ; elles ne valident pas ce questionnaire.</p>
+            <div class="intake-actions"><button type="button" class="button primary" id="exportPlan">Télécharger mon plan gratuit</button></div>
+            <p id="exportStatus" role="status"></p>
+            <p id="packDiscovery">Besoin d’aller plus loin dans l’organisation du dossier ? <a href="offres.html">Découvrir le pack envisagé</a>. Il n’est pas encore disponible à l’achat.</p>
+            <p class="legal-note">Ces pistes générales ne mesurent ni le danger, ni tes droits, ni l’issue d’une procédure. Une urgence nécessite un contact adapté, quel que soit ce résultat.</p>
+            <div class="result-actions"><a class="button primary" href="checklist-preparation.html">Ouvrir la checklist gratuite</a><a class="button secondary" href="question.html">Préparer une question</a><button class="button secondary" id="restartButton" type="button">Recommencer</button></div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><p>Point Séparation · Information générale et préparation en France.</p><a href="confidentialite.html">Données et confidentialité</a></footer>
+  </body>
+</html>
