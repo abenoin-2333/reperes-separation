@@ -22,7 +22,7 @@ interestForm.addEventListener('submit', event => {
   const selected = interestForm.querySelector('input:checked');
   const reason = document.getElementById('choiceReason').value.trim();
   const missing = document.getElementById('missingValue').value.trim();
-  status.textContent = 'À ' + priceSelect.value + ' € : ' + selected.parentElement.textContent.trim() + (reason ? ' Pourquoi : ' + reason : '') + (missing ? ' Ce qui manque : ' + missing : '') + ' Aucun avis n’a été transmis. Aucun achat ni réservation n’a été effectué.';
+  status.textContent = 'À ' + priceSelect.value + ' € : ' + selected.parentElement.textContent.trim() + (reason ? ' Pourquoi : ' + reason : '') + (missing ? ' Ce qui manque : ' + missing : '') + ' Aucun avis n’a été transmis. Aucun achat ni aucune réservation n’ont été effectués.';
 });
 interestForm.addEventListener('reset', () => {
   status.textContent = '';

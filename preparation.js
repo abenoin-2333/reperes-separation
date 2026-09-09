@@ -16,7 +16,7 @@
     const next = [
       sensitive ? 'Contacter un professionnel ou un service d’aide adapté avant de chercher à régler les tensions seul. En cas de danger immédiat : 17 ou 112.' : 'Écrire trois questions auxquelles tu souhaites une réponse pendant le rendez-vous.',
       a[0] === 3 ? 'Noter les dates figurant sur les convocations ou courriers reçus et demander au professionnel de confirmer les échéances.' : 'Écrire une chronologie courte : situation actuelle, dates connues et événements à clarifier.',
-      children ? 'Décrire une semaine habituelle des enfants : école, trajets, soins, activités et disponibilité de chaque parent, sans leur demander de choisir.' : housing ? 'Noter qui occupe le logement, le loyer ou crédit et les charges mensuelles connues.' : 'Noter tes charges fixes mensuelles et les changements de logement déjà envisagés.',
+      children ? 'Décrire une semaine habituelle des enfants : école, trajets, soins, activités et disponibilité de chaque parent, sans leur demander de choisir.' : housing ? 'Noter qui occupe le logement, le loyer ou le crédit et les charges mensuelles connues.' : 'Noter tes charges fixes mensuelles et les changements de logement déjà envisagés.',
       a[4] === 0 ? 'Vérifier avec le cabinet le format et la liste des pièces attendues avant de transmettre le dossier.' : 'Créer deux listes : pièces déjà disponibles et pièces à demander. Ne cherche pas à accéder aux comptes ou documents privés de l’autre personne sans autorisation.',
       a[9] >= 2 ? 'Envoyer au professionnel, par le canal convenu, une liste courte des sujets encore ouverts et demander le coût du prochain échange.' : 'Demander au cabinet le tarif du premier rendez-vous, sa durée, les pièces attendues et les modalités de facturation.'
     ];
@@ -76,8 +76,8 @@ if (typeof document !== 'undefined') {
   document.getElementById('exportPlan')?.addEventListener('click', () => {
     if (!currentPlan) return;
     const p = currentPlan;
-    const sections = [['TA SITUATION', p.situation], ['TES PRIORITES', p.priorities], ['TES 5 ACTIONS', p.next], ['TES DOCUMENTS', p.documents], ['TES QUESTIONS', p.questions], ['POINTS D’ATTENTION', p.attention], ['TES RESSOURCES', p.resources.map(([label, href]) => label + ' : ' + href)]];
-    const output = ['POINT SEPARATION - PLAN DE PREPARATION', 'Règles éditoriales v1 - 9 septembre 2026', 'Document personnel à relire, sans avis juridique.', p.summary, ...sections.map(([title, items]) => title + '\n' + items.map(x => '- ' + x).join('\n'))].join('\n\n');
+    const sections = [['TA SITUATION', p.situation], ['TES PRIORITÉS', p.priorities], ['TES 5 ACTIONS', p.next], ['TES DOCUMENTS', p.documents], ['TES QUESTIONS', p.questions], ['POINTS D’ATTENTION', p.attention], ['TES RESSOURCES', p.resources.map(([label, href]) => label + ' : ' + href)]];
+    const output = ['POINT SÉPARATION - PLAN DE PRÉPARATION', 'Règles éditoriales v1 - 9 septembre 2026', 'Document personnel à relire, sans avis juridique.', p.summary, ...sections.map(([title, items]) => title + '\n' + items.map(x => '- ' + x).join('\n'))].join('\n\n');
     const url = URL.createObjectURL(new Blob([output], { type: 'text/plain;charset=utf-8' }));
     const link = document.createElement('a'); link.href = url; link.download = 'mon-plan-preparation.txt'; link.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);

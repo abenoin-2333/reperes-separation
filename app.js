@@ -7,7 +7,7 @@ const questions = [
       { label: "La séparation est annoncée." },
       { label: "Nous sommes déjà séparés." },
       { label: "Une procédure est en cours." },
-      { label: "Les problèmes continuent après séparation." },
+      { label: "Les problèmes continuent après la séparation." },
     ],
   },
   {
@@ -17,7 +17,7 @@ const questions = [
       { label: "Non." },
       { label: "Oui, un enfant." },
       { label: "Oui, plusieurs enfants." },
-      { label: "Oui, et la garde ou résidence est déjà conflictuelle." },
+      { label: "Oui, et la garde ou la résidence est déjà conflictuelle." },
     ],
   },
   {
@@ -28,7 +28,7 @@ const questions = [
       { label: "Protéger la relation avec mes enfants." },
       { label: "Organiser mes finances et éviter les coûts inutiles." },
       { label: "Éviter que la situation dégénère." },
-      { label: "Me préparer à un rendez-vous avocat ou juge." },
+      { label: "Me préparer à un rendez-vous avec un avocat ou un juge." },
     ],
   },
   {
@@ -93,7 +93,7 @@ const questions = [
   },
   {
     axis: "Professionnels",
-    text: "As-tu déjà consulté un avocat, médiateur ou professionnel ?",
+    text: "As-tu déjà consulté un avocat, un médiateur ou un autre professionnel ?",
     answers: [
       { label: "Non." },
       { label: "J’y pense." },
