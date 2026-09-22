@@ -1,0 +1,22 @@
+.procedure-scope { margin-top: 28px; line-height: 1.6; color: var(--muted); }
+.procedure-grid { align-items: start; }
+.procedure-detail { border: 1px solid var(--line); border-radius: 8px; background: #fff; scroll-margin-top: 160px; min-width: 0; }
+.procedure-detail summary { cursor: pointer; padding: 20px; color: #214f46; }
+.procedure-detail summary:hover { background: #f0f6f3; }
+.procedure-detail summary:focus-visible { outline: 3px solid #286ea1; outline-offset: 3px; }
+.procedure-title { font-size: 1.25rem; font-weight: 700; }
+.procedure-intro { display: block; margin-top: 10px; color: #424f4b; line-height: 1.5; }
+.procedure-action { display: block; margin-top: 14px; font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+.procedure-detail[open] summary { border-bottom: 1px solid var(--line); }
+.procedure-content { padding: 20px; }
+.procedure-content h3 { font-size: 1.0625rem; margin: 0 0 12px; }
+.procedure-content h3:not(:first-child) { margin-top: 24px; }
+.procedure-content p { margin: 0 0 16px; line-height: 1.6; }
+.procedure-content ol { padding-left: 24px; margin: 16px 0; }
+.procedure-content li { padding-left: 4px; margin-bottom: 14px; line-height: 1.6; }
+.procedure-content a, .process-grid article > a { text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.process-grid article > a { display: inline-block; margin-top: 16px; }
+.procedure-content .procedure-source { font-size: .875rem; border-top: 1px solid var(--line); padding-top: 16px; }
+@media (max-width: 860px) { .procedure-grid { grid-template-columns: minmax(0, 1fr); } }
+@media print { .procedure-grid { display: block; } .procedure-detail { margin-bottom: 20px; } .procedure-detail > .procedure-content { display: block !important; } .procedure-action { display: none; } }
+
