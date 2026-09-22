@@ -3,50 +3,150 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Point Séparation - Repères pour les hommes et les pères en France</title>
-  <meta name="description" content="Séparation et divorce en France : fais le point, prépare tes questions et retrouve des repères sur les enfants, la résidence, les finances et les démarches." />
-  <link rel="stylesheet" href="styles.css" /><link rel="stylesheet" href="journey.css" />
+  <title>Point Séparation - Comprendre et préparer sa séparation en France</title>
+  <meta name="description" content="Une séparation envisagée, annoncée ou déjà engagée ? Comprends les étapes en France, retrouve les repères utiles et prépare tes échanges avec un avocat. Gratuit, sans compte." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="journey.css" />
+    <link rel="stylesheet" href="navigation.css" />
+  <link rel="stylesheet" href="home.css" />
   <script src="site.js" defer></script>
 </head>
-<body class="journey-page">
+<body class="journey-page home-page">
   <a class="skip-link" href="#contenu">Aller au contenu</a>
-  <header class="topbar">
-    <a class="brand" href="index.html" aria-label="Point Séparation, accueil"><span class="brand-mark" aria-hidden="true">PS</span><span>Point Séparation</span></a>
-    <nav class="nav" aria-label="Navigation principale"><a href="#sujets">Les repères</a><a href="diagnostic.html">Faire le point</a><a href="pourquoi.html">Notre démarche</a><a href="question.html">Poser une question</a></nav>
-  </header>
+  <header class="topbar site-header">
+      <a class="brand" href="index.html" aria-label="Point Séparation, accueil"><span class="brand-mark" aria-hidden="true">PS</span><span>Point Séparation</span></a>
+      <button class="site-menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" hidden>Menu</button>
+      <nav id="main-navigation" class="nav" aria-label="Navigation principale">
+        <a href="parcours.html">Comprendre</a>
+        <a href="index.html#vie-pratique">Vie pratique</a>
+        <a href="diagnostic.html">Se préparer</a>
+        <a href="index.html#aide">Trouver de l’aide</a>
+        <a href="pourquoi.html">À propos</a>
+      </nav>
+    </header>
   <main id="contenu">
     <section class="welcome" aria-labelledby="welcome-title">
-      <img src="assets/hero-preparation-documents.png" alt="Un homme prend le temps de préparer ses documents" width="1536" height="1024" fetchpriority="high" />
+      <img src="assets/hero-preparation-documents.png" alt="Un homme rassemble ses documents à son bureau" width="1536" height="1024" fetchpriority="high" />
       <div class="welcome-copy">
-        <p class="eyebrow">Pour les hommes et les pères · France</p>
-        <h1 id="welcome-title">Séparation<br /> et divorce.</h1>
-        <p class="welcome-lead">Prépare ton prochain rendez-vous : ta situation, tes documents, tes questions et tes priorités.</p>
-        <p>Des repères pour préparer tes démarches, préserver le lien avec tes enfants et organiser les prochaines étapes.</p>
-        <div class="hero-actions"><a class="button primary" href="diagnostic.html">Préparer mon rendez-vous</a><a class="button secondary" href="question.html">Préparer ma question</a></div>
-        <p><a href="hommes-peres.html">Découvrir le parcours hommes et pères</a></p><p class="welcome-note">Gratuit, sans compte. Information générale, sans conseil juridique personnalisé.</p>
+        <p class="eyebrow">Séparation et divorce en France</p>
+        <h1 id="welcome-title">Point Séparation</h1>
+        <p class="welcome-lead">Une séparation bouleverse les repères.<br /> Retrouve un point de départ.</p>
+        <p>Envisagée, annoncée ou déjà engagée : comprends les étapes de ta séparation et prépare tes échanges avec un avocat, à ton rythme.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="parcours.html">Comprendre les étapes</a>
+          <a class="button secondary" href="diagnostic.html">Préparer ma situation</a>
+        </div>
+        <p class="welcome-note">Repères et premiers outils gratuits, sans compte.</p>
       </div>
     </section>
-    <section id="sujets" class="topic-section" aria-labelledby="topics-title">
-      <div class="topic-heading"><div><p class="eyebrow">Un sujet à la fois</p><h2 id="topics-title">De quoi as-tu besoin maintenant ?</h2></div><a href="diagnostic.html">Je ne sais pas par où commencer</a></div>
-      <div class="topic-grid">
-        <a href="enfants.html"><span class="topic-category">Enfants</span><h3>Préserver leurs repères</h3><p>Résidence, quotidien et lien avec chaque parent. Partir des besoins de l’enfant.</p><span class="topic-action">Voir les possibilités</span></a>
-        <a href="finances.html"><span class="topic-category">Budget</span><h3>Comprendre les sujets financiers</h3><p>Charges, frais, pension et documents à rassembler avant un échange professionnel.</p><span class="topic-action">Préparer les chiffres</span></a>
-        <a href="parcours.html"><span class="topic-category">Démarches</span><h3>Savoir ce qui vient ensuite</h3><p>Les étapes d’un divorce, les interlocuteurs et les questions à poser.</p><span class="topic-action">Voir le parcours</span></a>
-        <a href="checklist-preparation.html"><span class="topic-category">Documents</span><h3>Préparer un rendez-vous</h3><p>Une checklist accessible immédiatement pour commencer à classer les pièces utiles.</p><span class="topic-action">Ouvrir la checklist</span></a>
-        <a href="enfants.html#international"><span class="topic-category">Deux pays</span><h3>Anticiper la distance</h3><p>Couple binational ou départ à l’étranger : les points à clarifier pour les enfants.</p><span class="topic-action">Explorer les repères</span></a>
-        <a href="methode.html#sensibles"><span class="topic-category">Soutien</span><h3>Faire face aux tensions</h3><p>Poser les faits, préparer un échange et identifier un besoin d’aide professionnelle.</p><span class="topic-action">Trouver un point de départ</span></a>
+
+    <section id="sujets" class="home-section" aria-labelledby="topics-title">
+      <div class="home-heading">
+        <p class="eyebrow">Ton point de départ</p>
+        <h2 id="topics-title">De quoi as-tu besoin aujourd’hui ?</h2>
+        <p>Pensé notamment pour les hommes et les pères, ouvert à tous.</p>
+      </div>
+      <div class="home-topics">
+        <article id="comprendre" aria-labelledby="understand-title">
+          <p class="topic-category">Comprendre</p>
+          <h3 id="understand-title">Qu’est-ce qui m’attend ?</h3>
+          <p>Les voies du divorce, les étapes et les interlocuteurs, sans calendrier imposé.</p>
+          <ul>
+            <li><a href="parcours.html#voies">Comprendre les voies du divorce</a></li>
+            <li><a href="parcours.html#timeline">Voir les étapes des démarches</a></li>
+          </ul>
+        </article>
+        <article id="vie-pratique" aria-labelledby="practical-title">
+          <p class="topic-category">Vie pratique</p>
+          <h3 id="practical-title">Enfants, logement et finances</h3>
+          <p>Les sujets du quotidien à clarifier, un à la fois.</p>
+          <ul>
+            <li><a href="enfants.html">Enfants et organisation parentale</a></li>
+            <li><a href="finances.html">Budget, logement et coûts</a></li>
+            <li><a href="enfants.html#international">Quand plusieurs pays sont concernés</a></li>
+          </ul>
+        </article>
+        <article id="preparer" aria-labelledby="prepare-title">
+          <p class="topic-category">Se préparer</p>
+          <h3 id="prepare-title">Par où commencer concrètement ?</h3>
+          <p>Faire le point, réunir les premières pièces et noter les questions importantes.</p>
+          <ul>
+            <li><a href="diagnostic.html">Faire le point en 11 questions</a></li>
+            <li><a href="checklist-preparation.html">Ouvrir la checklist gratuite</a></li>
+            <li id="question"><a href="question.html">Préparer une question à emporter</a></li>
+          </ul>
+        </article>
+        <article id="aide" aria-labelledby="help-title">
+          <p class="topic-category">Trouver de l’aide</p>
+          <h3 id="help-title">À qui puis-je m’adresser ?</h3>
+          <p>Des professionnels et des ressources pour ne pas rester seul face aux questions.</p>
+          <ul>
+            <li><a href="https://www.justice.fr/annuaires" target="_blank" rel="noopener noreferrer">Avocats et points-justice <span class="link-source">· Justice.fr</span></a></li>
+            <li><a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F2153" target="_blank" rel="noopener noreferrer">Choisir son avocat <span class="link-source">· Service Public</span></a></li>
+            <li><a href="methode.html#sensibles">Tensions, violences ou besoin de soutien</a></li>
+          </ul>
+        </article>
       </div>
     </section>
-    <section id="question" class="question-band" aria-labelledby="contact-title">
-      <div><p class="eyebrow">Un espace pour mettre des mots</p><h2 id="contact-title">Tu as une question précise ?</h2><p>Prépare un court récapitulatif : où tu en es, ce qui te préoccupe et ce que tu veux clarifier. Tu pourras le relire et choisir de le partager.</p></div><a class="button primary" href="question.html">Préparer ma question</a>
+
+    <section class="home-section home-method" aria-labelledby="method-title">
+      <div class="home-heading">
+        <p class="eyebrow">À ton rythme</p>
+        <h2 id="method-title">Un fil conducteur, pas tout à faire aujourd’hui.</h2>
+      </div>
+      <ol class="home-steps">
+        <li><span class="home-step-number" aria-hidden="true">01</span><div><h3>Poser ta situation</h3><p>Distinguer ce que tu sais, ce qui te préoccupe et ce qui reste à clarifier.</p><a href="diagnostic.html">Construire mon plan de départ</a></div></li>
+        <li><span class="home-step-number" aria-hidden="true">02</span><div><h3>Organiser les éléments</h3><p>Rassembler les documents disponibles et repérer ceux qui manquent.</p><a href="checklist-preparation.html">Commencer ma liste de documents</a></div></li>
+        <li><span class="home-step-number" aria-hidden="true">03</span><div><h3>Préparer les échanges</h3><p>Mettre les faits et les questions au clair pour ton prochain rendez-vous.</p><a href="methode.html#preparer-echange">Préparer une synthèse courte</a></div></li>
+      </ol>
+      <p class="home-boundary">L’avocat reste ton interlocuteur pour analyser tes droits et les décisions à prendre. Ici, tu prépares les éléments de la conversation, sans garantie de délai, de coût ou de résultat.</p>
     </section>
-    <section class="trust-section" aria-labelledby="trust-title">
-      <div><p class="eyebrow">Notre démarche</p><h2 id="trust-title">Soutenir sans opposer.<br />Informer avec prudence.</h2><p>Une séparation peut être éprouvante. Point Séparation aide les hommes et les pères à organiser les faits et les questions, en gardant l’intérêt des enfants au centre.</p><a href="pourquoi.html">Pourquoi Point Séparation existe</a></div>
+
+    <div class="home-section home-context">
+      <section aria-labelledby="purpose-title">
+        <p class="eyebrow">Pourquoi ce site existe</p>
+        <h2 id="purpose-title">Retrouver des repères quand tout se bouscule.</h2>
+        <p>Ce projet est né d’une expérience de séparation et d’un constat : les informations existent, mais il est difficile de savoir lesquelles regarder et dans quel ordre.</p>
+        <p>Notre intention est de rendre cette préparation plus accessible, avec une attention particulière aux hommes et aux pères, sans opposer les parents.</p>
+        <a href="pourquoi.html">À propos de Point Séparation</a>
+        <a class="home-audience-link" href="hommes-peres.html">Les préoccupations des hommes et des pères</a>
+      </section>
+      <section aria-labelledby="example-title">
+        <p class="eyebrow">Un résultat concret à découvrir</p>
+        <h2 id="example-title">À quoi peut ressembler un dossier préparé ?</h2>
+        <p>Une situation résumée, une chronologie, un budget descriptif, les pièces à réunir et les questions pour l’avocat.</p>
+        <p class="home-example-note">L’exemple est entièrement fictif. Ce n’est ni un dossier juridique validé ni un document généré à partir de tes réponses.</p>
+        <a class="button secondary" href="exemple-dossier.html">Voir le dossier d’exemple</a>
+        <p class="home-offer-note">Le plan de départ est gratuit. Un dossier plus complet est envisagé dans une future offre payante, non disponible à l’achat. <a href="offres.html">Comparer le plan et le dossier</a></p>
+      </section>
+    </div>
+
+    <section id="sources" class="home-section home-trust" aria-labelledby="trust-title">
+      <div>
+        <p class="eyebrow">Des repères, avec leurs limites</p>
+        <h2 id="trust-title">Comprendre d’où vient l’information.</h2>
+        <p>Les pages thématiques renvoient aux références officielles. Le site propose une préparation pratique et des informations générales, pas une consultation juridique.</p>
+        <ul class="home-sources">
+          <li><a href="parcours.html#sources">Procédures et démarches</a></li>
+          <li><a href="enfants.html#sources">Enfants et situations internationales</a></li>
+          <li><a href="finances.html#sources">Finances et contributions</a></li>
+        </ul>
+      </div>
       <div class="trust-faq">
-        <details><summary>Est-ce une consultation juridique ?</summary><p>Non. Les contenus et le questionnaire donnent des repères généraux de préparation. Ils ne déterminent ni tes droits, ni une stratégie, ni ce qu’un juge décidera. Pour ta situation personnelle, consulte un professionnel qualifié.</p></details>
-        <details><summary>Le point guidé utilise-t-il une IA ?</summary><p>Non. Il s’agit actuellement d’un questionnaire à réponses prédéfinies. Aucun agent IA ne répond aux questions libres sur le site.</p><a href="diagnostic.html">Ouvrir le questionnaire</a></details>
-        <details><summary>Faut-il donner son email ?</summary><p>Le questionnaire et la checklist sont accessibles sans email. Pour préparer un brouillon de question, l’email est facultatif. Un envoi à un service de réception nécessite des informations de contact et un accord distinct.</p><a href="confidentialite.html">Comprendre l’utilisation des données</a></details>
-        <p class="reference-links">Consulter les sources : <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F10567" target="_blank" rel="noopener noreferrer">Service Public</a> · <a href="https://www.justice.fr" target="_blank" rel="noopener noreferrer">Justice.fr</a> · <a href="https://www.legifrance.gouv.fr" target="_blank" rel="noopener noreferrer">Légifrance</a></p>
+        <details>
+          <summary>Est-ce utile si j’ai déjà un avocat ?</summary>
+          <p>L’objectif est de t’aider à organiser les faits et les questions pour tes échanges. Ton avocat peut déjà proposer une liste de pièces ou une méthode : pars de ses consignes. Ce site ne promet pas de réduction de tes honoraires.</p>
+        </details>
+        <details>
+          <summary>Qui lit mes réponses et ma question ?</summary>
+          <p>Le questionnaire utilise des réponses prédéfinies, pas une IA. Tes réponses et ton brouillon ne sont ni envoyés ni enregistrés automatiquement par le site. La réception des questions n’est pas ouverte : aucune réponse d’un conseiller n’est fournie.</p>
+          <a href="confidentialite.html">Données et confidentialité</a>
+        </details>
+        <details>
+          <summary>Et si ma situation concerne plusieurs pays ?</summary>
+          <p>Les repères juridiques présentés concernent la France. Ta situation peut nécessiter une vérification spécifique sur le pays compétent et le droit applicable. Un professionnel compétent doit t’aider à clarifier ce point.</p>
+          <a href="enfants.html#international">Voir les points à clarifier</a>
+        </details>
       </div>
     </section>
   </main>

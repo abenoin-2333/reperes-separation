@@ -1,5 +1,34 @@
 (() => {
   "use strict";
+  const menuButton = document.querySelector(".site-menu-toggle");
+  const navigation = document.getElementById("main-navigation");
+  if (menuButton && navigation) {
+    const compact = matchMedia("(max-width: 620px)");
+    const setOpen = open => {
+      navigation.hidden = !open;
+      menuButton.setAttribute("aria-expanded", String(open));
+    };
+    const resetMenu = () => {
+      menuButton.hidden = !compact.matches;
+      setOpen(!compact.matches);
+    };
+    resetMenu();
+    compact.addEventListener("change", resetMenu);
+    menuButton.addEventListener("click", () => setOpen(navigation.hidden));
+    navigation.addEventListener("click", event => {
+      if (compact.matches && event.target.closest("a")) setOpen(false);
+    });
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape" && compact.matches && !navigation.hidden) {
+        setOpen(false);
+        menuButton.focus();
+      }
+    });
+    document.addEventListener("click", event => {
+      if (compact.matches && !event.target.closest(".site-header")) setOpen(false);
+    });
+  }
+
   const revealAnchor = () => {
     let id;
     try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }

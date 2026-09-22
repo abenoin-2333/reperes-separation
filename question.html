@@ -7,14 +7,23 @@
     <meta name="description" content="Prépare une question claire sur ta séparation : situation, enfants, finances, documents ou départ à l’étranger. Relis ton brouillon avant de le partager." />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="journey.css" />
+    <link rel="stylesheet" href="navigation.css" />
     <script src="contact-config.js" defer></script>
     <script src="contact.js" defer></script>
-  </head>
+  <script src="site.js" defer></script>
+</head>
   <body class="journey-page">
     <a class="skip-link" href="#contenu">Aller au contenu</a>
-    <header class="topbar">
-      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">PS</span><span>Point Séparation</span></a>
-      <nav class="nav" aria-label="Navigation principale"><a href="index.html#sujets">Les repères</a><a href="diagnostic.html">Faire le point</a><a href="pourquoi.html">Notre démarche</a><a href="question.html" aria-current="page">Poser une question</a></nav>
+    <header class="topbar site-header">
+      <a class="brand" href="index.html" aria-label="Point Séparation, accueil"><span class="brand-mark" aria-hidden="true">PS</span><span>Point Séparation</span></a>
+      <button class="site-menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" hidden>Menu</button>
+      <nav id="main-navigation" class="nav" aria-label="Navigation principale">
+        <a href="parcours.html">Comprendre</a>
+        <a href="index.html#vie-pratique">Vie pratique</a>
+        <a href="diagnostic.html" aria-current="location">Se préparer</a>
+        <a href="index.html#aide">Trouver de l’aide</a>
+        <a href="pourquoi.html">À propos</a>
+      </nav>
     </header>
     <main id="contenu" class="intake-main">
       <div class="intake-intro">

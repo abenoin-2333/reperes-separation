@@ -3,29 +3,32 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Pourquoi Point Séparation</title>
+    <title>À propos - Point Séparation</title>
     <meta name="description" content="Pourquoi créer une plateforme sobre et pratique pour aider les hommes et les pères en France à préparer une séparation ou un divorce." />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="journey.css" />
-  </head>
+    <link rel="stylesheet" href="navigation.css" />
+  <script src="site.js" defer></script>
+</head>
   <body>
-    <header class="topbar" aria-label="Navigation principale">
-      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">PS</span><span>Point Séparation</span></a>
-      <nav class="nav">
-        <a href="index.html">Accueil</a>
-        <a href="enfants.html">Enfants</a>
-        <a href="parcours.html">Parcours</a>
-        <a href="finances.html">Finances</a>
-        <a href="methode.html">Méthode</a>
-        <a href="kit.html">Kit</a>
-      <a href="question.html">Poser une question</a></nav>
+    <header class="topbar site-header">
+      <a class="brand" href="index.html" aria-label="Point Séparation, accueil"><span class="brand-mark" aria-hidden="true">PS</span><span>Point Séparation</span></a>
+      <button class="site-menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" hidden>Menu</button>
+      <nav id="main-navigation" class="nav" aria-label="Navigation principale">
+        <a href="parcours.html">Comprendre</a>
+        <a href="index.html#vie-pratique">Vie pratique</a>
+        <a href="diagnostic.html">Se préparer</a>
+        <a href="index.html#aide">Trouver de l’aide</a>
+        <a href="pourquoi.html" aria-current="page">À propos</a>
+      </nav>
     </header>
     <main>
       <section class="page-hero">
         <div class="section-heading">
-          <p class="eyebrow">Pourquoi cette plateforme</p>
-          <h1>Parce qu’un homme séparé ne devrait pas avancer seul, à l’aveugle.</h1>
-          <p class="lead">Point Séparation aide à remettre de l’ordre dans un moment où les décisions, les documents, les enfants et les coûts peuvent arriver tous en même temps.</p>
+          <p class="eyebrow">À propos de Point Séparation</p>
+          <h1>Retrouver un fil conducteur dans la séparation.</h1>
+          <p class="lead">Ce projet est né d’une expérience de séparation : quand les repères se bousculent, comprendre les démarches et préparer les échanges peut sembler insurmontable.</p>
+          <p>Point Séparation est une initiative d’information et de préparation pratique. Son intention est de rendre les étapes plus lisibles et les informations plus faciles à organiser. Le site s’adresse notamment aux hommes et aux pères, tout en restant ouvert à tous.</p>
           <div class="page-nav">
             <a href="#besoin">Le besoin</a>
             <a href="#difference">Notre angle</a>
@@ -62,7 +65,7 @@
         </div>
         <div class="difference-grid">
           <article><h3>Non militant</h3><p>Un ton protecteur, sans agressivité ni généralisation.</p></article>
-          <article><h3>Pré-opérationnel</h3><p>Une aide avant les rendez-vous, les décisions et les échanges sensibles.</p></article>
+          <article><h3>En complément du professionnel</h3><p>Une aide pour organiser les faits et les questions. L’avocat analyse la situation juridique et confirme les pièces utiles ; sa méthode et ses consignes restent prioritaires.</p></article>
           <article><h3>Orienté dossier</h3><p>Chronologie, documents, budget, enfants, logement et communication.</p></article>
           <article><h3>Relié aux sources</h3><p>Des repères pratiques qui renvoient vers les sources officielles quand le droit est en jeu.</p></article>
         </div>
@@ -71,7 +74,7 @@
         <div class="section-heading">
           <p class="eyebrow">Cadre de confiance</p>
           <h2>Des repères, pas une stratégie juridique personnalisée.</h2>
-          <p>Point Séparation aide à organiser la pensée et les documents. Pour une décision juridique, il faut consulter un professionnel qualifié ou vérifier les sources officielles.</p>
+          <p>Le vécu à l’origine du projet ne constitue pas une expertise juridique. Les repères et les sources générales ne remplacent pas l’analyse de ta situation par un professionnel qualifié.</p><p>L’objectif est de faciliter la préparation des échanges, sans promettre d’économies, de délai ou de résultat. La consultation des repères, le questionnaire et la checklist sont gratuits. Une future offre de dossier organisé est envisagée, mais aucun achat n’est proposé aujourd’hui.</p>
         </div>
         <div class="source-grid">
           <a href="https://www.service-public.fr/particuliers/vosdroits/F10567" target="_blank" rel="noreferrer">Divorce par consentement mutuel</a>
@@ -84,7 +87,7 @@
         <a href="diagnostic.html"><span>Diagnostic</span>Commencer par 11 questions</a>
         <a href="enfants.html"><span>Enfants</span>Préparer la résidence et l’organisation</a>
         <a href="finances.html"><span>Finances</span>Clarifier les coûts et la prestation</a>
-        <a href="agent.html"><span>Agent</span>Comprendre le point guidé</a>
+        <a href="exemple-dossier.html"><span>Exemple fictif</span>Voir un dossier de préparation</a>
       </div></section>
     </main>
     <footer class="footer"><p>Point Séparation propose une aide pratique d’organisation. En cas de danger, d’urgence ou de procédure sensible, contacte un professionnel qualifié ou les services compétents.</p></footer>
